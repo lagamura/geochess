@@ -1,0 +1,22 @@
+services:
+  frontend:
+    image: node:18-alpine
+    command: sh -c "npm install && npm run dev"
+    ports:
+      - 8080:8080
+    working_dir: /geochess/frontend
+    # volumes:
+    #   - ./:/frontend
+
+  backend:
+    image: node:18-alpine
+    command: sh -c "npm install && npm run start"
+    ports:
+      - 8000:8000
+    working_dir: /geochess/backend
+    # volumes:
+    #   - 
+
+
+# volumes:
+#   todo-mysql-data:
